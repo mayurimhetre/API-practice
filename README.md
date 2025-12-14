@@ -1,16 +1,44 @@
-# API-practice
-Connecting to mongodb database and perform CRUD operations
+# Flask CRUD API with MongoDB
 
-POST request - Input JSON
-{
-    "id": "011",
-    "name": "abc",
-    "age": 23,
-    "address": "mumbai1",
-    "memeber": true
-}
+This project is a simple Flask-based REST API that demonstrates basic CRUD (Create, Read, Update, Delete) operations using **MongoDB** as the backend database.
 
-PUT and DELETE request - Input JSON
+---
+
+## Features
+
+- REST API built with **Flask**
+- Supports **GET, POST, PUT, DELETE** HTTP methods
+- Stores and retrieves data from **MongoDB** using `pymongo`
+- Single endpoint (`/sample`) handling multiple operations
+
+---
+
+## Tech Stack
+
+- Python 3
+- Flask
+- MongoDB
+- PyMongo
+
+---
+
+## API Endpoint
+
+### `/sample`
+
+Supports the following HTTP methods:
+
+#### 1. **GET**
+Fetch all records from the database.
+
+**Response Example**
+```json
 {
-    "id": ["009","003","002"]
+  "success": true,
+  "data": [
+    {
+      "name": "John",
+      "address": "Mumbai"
+    }
+  ]
 }
